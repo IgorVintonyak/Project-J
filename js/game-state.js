@@ -188,9 +188,9 @@ Game.prototype.render = function() {
 
 Game.prototype.mousedown = function() {
 		// this._buildBlock(app.input.mouse.x, app.input.mouse.y);
-		this._spawnAmmo(app.input.mouse.x, app.input.mouse.y);
-		this._spawnCrate(app.input.mouse.x + 24, app.input.mouse.y);
-		this._spawnBandages(app.input.mouse.x + 48, app.input.mouse.y);
+		// this._spawnAmmo(app.input.mouse.x, app.input.mouse.y);
+		// this._spawnCrate(app.input.mouse.x + 24, app.input.mouse.y);
+		// this._spawnBandages(app.input.mouse.x + 48, app.input.mouse.y);
 };
 
 Game.prototype.shake = function(value) {
