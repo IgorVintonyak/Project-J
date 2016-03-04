@@ -305,8 +305,8 @@ Player.prototype.softReset = function(time) {
     this.lives = 3;
     this.marioTimer = 0;
     this.immortal = false;
+    this.isDead = false;
     this.weapon = new Melee(this);
-    // app.debug.clear();
   }
 };
 
@@ -325,6 +325,7 @@ Player.prototype.roundReset = function(time) {
     }
 
     this.immortal = false;
+    this.isDead = false;
     this.weapon = new Melee(this);
 
 };
