@@ -187,10 +187,7 @@ Game.prototype.render = function() {
 };
 
 Game.prototype.mousedown = function() {
-		// this._buildBlock(app.input.mouse.x, app.input.mouse.y);
-		// this._spawnAmmo(app.input.mouse.x, app.input.mouse.y);
-		// this._spawnCrate(app.input.mouse.x + 24, app.input.mouse.y);
-		// this._spawnBandages(app.input.mouse.x + 48, app.input.mouse.y);
+
 };
 
 Game.prototype.shake = function(value) {
@@ -314,8 +311,8 @@ Game.prototype.stats = function() {
  	app.video.ctx.fillText(this.players[0].health, 545, 26);
  	app.video.ctx.fillText(this.players[1].health, 655, 26);
 
- 	app.video.ctx.fillText(this.players[1].lives, 485, 26);
- 	app.video.ctx.fillText(this.players[0].lives, 715, 26);
+ 	app.video.ctx.fillText(this.players[0].lives, 485, 26);
+ 	app.video.ctx.fillText(this.players[1].lives, 715, 26);
 
  	app.video.ctx.font = '15px sans-serif';
 
