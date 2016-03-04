@@ -40,11 +40,11 @@ Pause.prototype.mousedown = function(x, y, button) {
 };
 
 Pause.prototype.render = function() {
-	if (this.visible) {
-		for (var i = 0; i < this.buttons.length; i++) {
-    	this.buttons[i].render(); 
-  	}
-		app.video.ctx.drawImage(app.assets.get('pics/opbackground.png'), 0, 0, app.assets.get('pics/opbackground.png').width, app.assets.get('pics/opbackground.png').height);
+	app.video.ctx.drawImage(app.assets.get('pics/opbackground.png'), 0, 0, app.assets.get('pics/opbackground.png').width, app.assets.get('pics/opbackground.png').height);
+  if (this.visible) {
+    for (var i = 0; i < this.buttons.length; i++) {
+      this.buttons[i].render(); 
+    }
 	};
 
 
