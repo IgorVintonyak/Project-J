@@ -121,7 +121,8 @@ Game.prototype.update = function(time) {
 			this.ggTimer -= time;
 
 			if (this.ggTimer <= 0) {
-				this.players[i].roundReset(time);
+				this.players[0].roundReset(time);
+				this.players[1].roundReset(time);
 				this.ggTimer = 3;
 				this.roundTimer = 91;
 			}	
