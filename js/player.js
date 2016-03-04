@@ -220,16 +220,6 @@ Player.prototype.keys = function(time) {
     this.dx += 6000 * time;
     this.direction = 3;
   }
-
-  if (app.input.isKeyDown(49)) {
-   this.weapon = new Shotgun(this);
-  }
-  if (app.input.isKeyDown(50)) {
-   this.weapon = new Pistol(this);
-  }
-  if (app.input.isKeyDown(51)) {
-   this.weapon = new Rifle(this);
-  }
 };
 
 Player.prototype.fire = function(time) {
