@@ -21,7 +21,7 @@ GameOver.prototype.keydown = function(key) {
 
 }
 
-GameOver.prototype.mousedown = function(x, y, button) {
+GameOver.prototype.mousedown = function(x, y) {
   if (x > this.newGame.x && x < this.newGame.x + this.newGame.width && y > this.newGame.y && y < this.newGame.y + this.newGame.height) {
    app.states.unpause("Game");
    app.game.restart();
