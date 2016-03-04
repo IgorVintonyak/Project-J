@@ -42,20 +42,20 @@ GameOver.prototype.mousedown = function(x, y) {
 
 GameOver.prototype.render = function() {
 	if (this.visible) {
-		for (var i = 0; i < this.buttons.length; i++) {
-    	this.buttons[i].render(); 
-  	}
+		app.video.ctx.drawImage(app.assets.get('pics/opbackground.png'), 0, 0, app.assets.get('pics/opbackground.png').width, app.assets.get('pics/opbackground.png').height);
+    for (var i = 0; i < this.buttons.length; i++) {
+      this.buttons[i].render(); 
+    }
 
-  	app.video.ctx.fillStyle = 'rgba(37, 125, 176, 1)';
- 		app.video.ctx.font = '70px sans-serif';
-  	app.video.ctx.textAlign = 'center';
-		app.video.ctx.textBaseline = 'bottom';
+    app.video.ctx.fillStyle = 'rgba(37, 125, 176, 1)';
+    app.video.ctx.font = '70px sans-serif';
+    app.video.ctx.textAlign = 'center';
+    app.video.ctx.textBaseline = 'bottom';
 
-  	var winner = app.states.get('Game').state.winner;
- 		app.video.ctx.fillText(winner, app.width / 2, 180);
+    var winner = app.states.get('Game').state.winner;
+    app.video.ctx.fillText(winner, app.width / 2, 180);
 
-		app.video.ctx.drawImage(app.assets.get('pics/endgame.png'), app.width / 2 - app.assets.get('pics/endgame.png').width / 2, 40);
-		// app.video.ctx.drawImage(app.assets.get('pics/opbackground.png'), 0, 0, app.assets.get('pics/opbackground.png').width, app.assets.get('pics/opbackground.png').height);
+    app.video.ctx.drawImage(app.assets.get('pics/endgame.png'), app.width / 2 - app.assets.get('pics/endgame.png').width / 2, 40);
 	};
 
 
