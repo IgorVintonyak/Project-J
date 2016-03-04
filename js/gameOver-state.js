@@ -26,7 +26,7 @@ GameOver.prototype.mousedown = function(x, y, button) {
    app.states.unpause("Game");
    app.game.restart();
 	 this.visible = false;
-   app.states.pause("GameOver");
+   app.states.pause("gameOver");
   }
 
   if (x > this.menuButton.x && x < this.menuButton.x + this.menuButton.width && y > this.menuButton.y && y < this.menuButton.y + this.menuButton.height) {
@@ -35,7 +35,7 @@ GameOver.prototype.mousedown = function(x, y, button) {
    app.states.pause("Game");
 	 this.visible = false;
 	 app.menu = app.states.add('Menu', new Menu());
-   app.states.pause("GameOver");
+   app.states.pause("gameOver");
 
   }
 };
