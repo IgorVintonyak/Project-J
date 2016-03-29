@@ -69,41 +69,6 @@ var particleDefs = {
     }
   },
 
-  follow: {
-    init: function(self) {
-      self.color = 'rgba(150, 40, 128, 0.2)';
-      self.dy = 0;
-      self.dx = 0;
-      self.alphaSpeed = 0.6 + Math.random() / 5;
-      self.rotaitonSpeed = 2 + Math.random() * 4 - 2;
-      self.scaleSpeed = -1;
-
-      self.x -= 5;
-      self.y -= 5;
-    },
-
-    shouldRemove: function(self) {
-      return self.alpha <= 0;
-    },
-
-    update: function(self, time) {
-      self.dx = self.dx + (0 - self.dx) * time;
-    },
-
-    render: function(self) {
-      app.video.ctx.save();
-      app.video.ctx.fillStyle = self.color;
-
-      app.video.ctx.translate(self.x + 5, self.y + 5);
-      app.video.ctx.scale(self.scale, self.scale);
-      app.video.ctx.rotate(self.rotation);
-      app.video.ctx.translate(-self.x - 5, -self.y - 5);
-      app.video.ctx.fillRect(self.x, self.y, 10, 10);
-
-      app.video.ctx.restore();
-    }
-  },
-
   jump: {
     init: function(self) {
       self.color = 'rgba(255, 255, 255, 0.2)';
